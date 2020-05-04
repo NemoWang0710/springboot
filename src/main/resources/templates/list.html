@@ -7,6 +7,19 @@
 <body>
 <h1>hello world</h1>
 
-<h2 th:text="${name}"></h2>
+City List
+    <hr>
+
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+        </tr>
+
+        <tr th:each="city : ${list}">
+            <th th:text = "${city.id}" ></th>
+            <th th:text = "${city.name}"></th>
+        </tr>
+    </table>
 </body>
 </html>
